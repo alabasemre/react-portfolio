@@ -1,0 +1,26 @@
+.sidebar {
+    display: flex;
+    flex: 1;
+    min-width: 200px;
+    flex-direction: column;
+
+    height: calc(100vh);
+    background-color: var(--section-bg1);
+    color: #ccc;
+
+    position: sticky;
+    top: 0px;
+}
+
+.link {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.5s ease;
+    padding: 0.8rem;
+}
+
+.link:hover {
+    color: var(--sec-color);
+    background: var(--section-bg-2);
+}

@@ -1,0 +1,151 @@
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 870px;
+    margin-top: 4rem;
+    position: relative;
+}
+
+.timeline-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: #ccc;
+    width: 400px;
+    padding: 0.6rem;
+    margin-bottom: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px #88888899;
+    transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+    box-shadow: 0 0 10px 1px var(--sec-color);
+}
+
+.timeline-card:hover .timeline-dot {
+    background-color: var(--sec-color);
+    transform: rotate(0);
+    border-radius: 50%;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    top: -1rem;
+    background-color: #555;
+}
+
+.timeline-title {
+    color: var(--sec-color);
+}
+
+.timeline-date {
+    align-self: flex-end;
+    padding: 4px;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 600;
+    background: linear-gradient(to left, var(--main-color), var(--sec-color));
+}
+
+.timeline-text {
+    margin: 0.7rem 0;
+    line-height: 20px;
+}
+
+.timeline-card.left {
+    align-self: flex-start;
+}
+
+.timeline-card.right {
+    align-self: flex-end;
+}
+
+.timeline-dot {
+    position: absolute;
+    --dot-position: 42px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    transform: rotate(45deg);
+    background-color: var(--main-color);
+    transition: transform 0.5s ease, border-radius 0.7s ease,
+        background-color 0.7s ease;
+    top: calc(50% - 10px);
+}
+
+.dot-left {
+    left: calc(0px - var(--dot-position));
+}
+
+.dot-right {
+    right: calc(0px - var(--dot-position));
+}
+
+@media screen and (max-width: 900px) {
+    .timeline-container {
+        width: 770px;
+    }
+
+    .timeline-card {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .timeline-container {
+        width: 90%;
+    }
+
+    .timeline-container::before {
+        left: -15px;
+    }
+
+    .timeline-card {
+        width: 100%;
+        margin-left: 10px;
+    }
+
+    .timeline-card.right {
+        align-self: flex-start;
+    }
+
+    .dot-right {
+        left: -32px;
+    }
+
+    .dot-left {
+        left: -32px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .timeline-container {
+        width: 80%;
+    }
+
+    .timeline-container::before {
+        left: -15px;
+    }
+
+    .timeline-card {
+        width: 100%;
+        margin-left: 10px;
+    }
+
+    .timeline-card.right {
+        align-self: flex-start;
+    }
+
+    .dot-right {
+        left: -32px;
+    }
+
+    .dot-left {
+        left: -32px;
+    }
+}

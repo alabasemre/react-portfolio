@@ -1,0 +1,120 @@
+header {
+    background-color: var(--header-bg);
+    padding: 0.5rem 0;
+    box-shadow: 0 0.125rem 0.25rem #ffffff20;
+    position: relative;
+    z-index: 99;
+    height: 90px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--container-max-w-lg);
+    width: 90%;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+}
+
+.logo {
+    text-decoration: none;
+    color: var(--header-color);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-size: 40px;
+    line-height: 60px;
+}
+
+.nav-mobile {
+    display: none;
+}
+
+.logo:hover {
+    color: var(--main-color);
+}
+
+.nav-items {
+    display: flex;
+}
+
+.nav-item {
+    list-style-type: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--header-color);
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    font-weight: 700;
+}
+
+.nav-link:hover {
+    color: var(--main-color);
+}
+
+.nav-link.active {
+    color: var(--main-color);
+}
+
+.menu-toggle {
+    width: 32px;
+    height: 32px;
+    display: none;
+    fill: var(--header-color);
+    cursor: pointer;
+}
+
+.menu-toggle:hover {
+    fill: var(--main-color);
+}
+
+@media screen and (max-width: 1200px) {
+    nav {
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 0.5rem 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-container {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100vh;
+        z-index: 5;
+        width: 60%;
+        padding-top: 2rem;
+        padding-left: 1rem;
+        background-color: var(--header-bg);
+    }
+
+    .menu-toggle-close {
+        align-self: flex-end;
+        margin-right: 1rem;
+    }
+
+    .nav-items {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .nav-item {
+        padding: 10px 0;
+    }
+}

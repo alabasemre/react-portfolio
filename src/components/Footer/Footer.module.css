@@ -1,0 +1,31 @@
+footer {
+    background-color: var(--section-bg-2);
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.footer-copyright {
+    color: #fff;
+}
+
+.footer-text {
+    color: #fff;
+    font-weight: 600;
+}
+
+.mt-0 {
+    margin-top: 0;
+}
+
+@media screen and (max-width: 480px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

@@ -1,0 +1,53 @@
+.achievements {
+    background-color: var(--section-bg1);
+    width: 100%;
+    padding: 4rem 0;
+}
+
+.achievements-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.achievement {
+    display: grid;
+    justify-items: center;
+    gap: 0.4rem;
+}
+
+.achievement svg {
+    fill: var(--sec-color);
+    font-size: 36px;
+}
+
+.achievement-count {
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.achievement-text {
+    font-size: 20px;
+    color: #eee;
+}
+
+@media screen and (max-width: 768px) {
+    .achievements-container {
+        gap: 1rem;
+    }
+
+    .achievement svg {
+        font-size: 26px;
+    }
+
+    .achievement-count {
+        font-size: 36px;
+    }
+
+    .achievement-text {
+        font-size: 0.9rem;
+    }
+}

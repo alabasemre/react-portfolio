@@ -1,0 +1,68 @@
+.home__section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5.5rem 0;
+}
+
+.section-header {
+    font-size: 90px;
+    color: #333;
+    font-weight: 700;
+    line-height: 90px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+    transition: 0.7s ease;
+}
+
+.more-button {
+    background-color: transparent;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 30px;
+    padding: 10px 25px;
+
+    font-size: 1rem;
+    font-family: 'PT Sans', sans-serif;
+
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.more-button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.more-button:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+/* ADMIN FORM ELEMENTS */
+.textbox-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.textbox-admin {
+    font-size: 1.1rem;
+    width: 100%;
+    height: 40px;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+.textbox-admin:focus {
+    box-shadow: 0 0 1px 1px #88888899;
+}
+
+@media screen and (max-width: 768px) {
+    .section-header {
+        font-size: 70px;
+    }
+}
